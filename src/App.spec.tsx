@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
 
-describe("Main test", () => {
+describe("App Component", () => {
   it("should render an input and a square with the same white color", () => {
     render(<App />);
     const inputLabel = screen.getByLabelText(/Select color/i);
@@ -13,7 +13,7 @@ describe("Main test", () => {
     expect(box).toHaveStyle("background-color: #ffffff");
   });
 
-  it("should sync like input and box cores", () => {
+  it("should sync like input and box colors", () => {
     render(<App />);
     const inputElement = screen.getByLabelText("color", { selector: "input" });
     const box = screen.getByRole("article");
